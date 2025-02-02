@@ -1,4 +1,0 @@
-1:14:31
-
-Criando as rotas para
-navegação utilizando protected routes e BrowserRouter.
