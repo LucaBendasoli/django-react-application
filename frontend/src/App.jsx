@@ -1,6 +1,7 @@
 import react from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import ProtectedRoute from "./components/ProtectedRoute";
+import CarPage from "./pages/CarPage";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
@@ -20,6 +21,14 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route
+            path="/"
+            element={
+              <ProtectedRoute>
+                <CarPage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/register" element={<RegisterAndLogout />} />
