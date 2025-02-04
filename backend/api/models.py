@@ -5,13 +5,13 @@ from api.validators import validate_no_numeric_characters, validate_positive, va
 class Car(models.Model):
     class FuelType(models.TextChoices):
         GASOLINE = 'G', 'Gasoline'
-        ETHANOL = 'E85', 'Ethanol'
+        ETHANOL = 'T', 'Ethanol'
         DIESEL = 'D', 'Diesel'
         ELETRIC = 'E', 'Electric'
         HYBRID = 'H', 'Hybrid'
 
     make = models.CharField(max_length=30, blank=False, validators=[validate_no_numeric_characters], db_index=True)
-    model = models.CharField(max_lenght=50, blank=False, db_index=True)
+    model = models.CharField(max_length=50, blank=False, db_index=True)
     year = models.IntegerField(validators=[validate_year], db_index=True)
     color = models.CharField(max_length=20, validators=[validate_no_numeric_characters])
     mileage = models.FloatField(validators=[validate_positive])
@@ -29,5 +29,5 @@ class Car(models.Model):
             models.Index(fields=['created_at']),
             models.Index(fields=['make', 'model', 'year']),
             models.Index(fields=['make', 'model', 'price']),
-            models.Indes(fields=['year', 'price']),
+            models.Index(fields=['year', 'price']),
         ]
