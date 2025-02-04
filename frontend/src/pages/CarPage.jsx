@@ -1,19 +1,41 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import CarList from "../components/CarList";
+import LoadingIndicator from "../components/LoadingIndicator";
+import api from "../api";
 
 const CarPage = () => {
   const [cars, setCars] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    const fetchCars = async () => {
-      const res = await axios.get("/api/cars/");
-      setCars(res.data);
-    };
-    fetchCars();
+    api
+      .get("/api/cars/")
+      .then((res) => {
+        setCars(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        alert(`Error fetching cars: ${err}`);
+        setError(error);
+        setLoading(false);
+      });
   }, []);
 
-  return <CarList cars={cars} />;
+  if (loading) {
+    return <LoadingIndicator />;
+  }
+
+  if (error) {
+    return alert(`Error loading cars: ${error}`);
+  }
+
+  return (
+    <div>
+      <h1>Car List</h1>
+      <CarList cars={cars} />
+    </div>
+  );
 };
 
 export default CarPage;

@@ -1,6 +1,10 @@
 import React from "react";
 
 const CarList = ({ cars }) => {
+  if (!Array.isArray(cars) | cars.length === 0) {
+    return <div>No cars available.</div>
+  }
+
   return (
     <div>
       {cars.map((car) => (
