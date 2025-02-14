@@ -149,10 +149,31 @@ de carros cadastrados, usuários cadastrados, e alugueis.
 - **Roteamento**: Roteamento protegido com ProtectedRoute.
 - **Estilos**: Estilização básica com CSS.
 
+## Uso
+
+### Backend
+
+Para iniciar o servidor de desenvolvimento do Django, execute o seguinte comando:
+
+```sh
+python -m manage runserver
+```
+
+### Frontend
+
+Para iniciar o servidor de desenvolvimento do Vite para o frontend em React, execute o seguinte comando:
+
+```sh
+npm run dev
+```
+
+Com isso temos um terminal rodando o backend e outro rodando o frontend, acesse o url em que o frontend esta hospedado para utilizar a interface que fará requisições ao backend.
+Para acessar diretamente o backend, pode acessar a url em que está hospedado e seus endpoints pelo navegador ou fazer requisições pelo postman.
+
 ## Contribuição
 
 1. Faça um fork do projeto.
 2. Crie uma nova branch: `git checkout -b minha-nova-funcionalidade`
-3. Faça suas alterações e commit: `git commit -m 'Adiciona nova funcionalidade'`
+3. Faça suas alterações e commit: `git commit -m 'feat: adiciona nova funcionalidade'`
 4. Envie para o repositório remoto: `git push origin minha-nova-funcionalidade`
 5. Abra um Pull Request.
