@@ -8,6 +8,67 @@ relevantes para o aluguel, alugar estes carros gerando um orçamento e cadastran
 Enquanto o usuário administrador herdará as funcionálidades do usuário cliente além de poder gerenciar toda base
 de carros cadastrados, usuários cadastrados, e alugueis.
 
+## Estrutura do Projeto
+
+### car-rental-fullstack
+- backend/
+    - api/
+        - migrations/
+            - __init__.py
+        - __init__.py
+        - admin.py
+        - apps.py
+        - models.py
+        - serializers.py
+        - tests.py
+        - urls.py
+        - validators.py
+    - backend/
+        - __init__.py
+        - asgi.py
+        - settings.py
+        - urls.py
+        - wsgi.py
+    - media/
+        - car_image/
+            - honda_civic.jpg
+            - toyota_corolla.jpg
+    - manage.py
+    - requirements.txt
+- frontend/
+    - public/
+        - (imagens, icones, etc.)
+    - src/
+        - assets/
+            - (imagens, ícones, etc.)
+        - components/
+            - CarList.jsx
+            - Form.jsx
+            - LoadingIndicator.jsx
+            - ProtectedRoute.jsx
+        - pages/
+            - CarPage.jsx
+            - Login.jsx
+            - NotFound.jsx
+            - Register.jsx
+        - styles/
+            - Form.css
+            - LoadingIndicator.css
+        - api.js
+        - App.jsx
+        - constants.js
+        - main.jsx
+    - package.json
+    - package-lock.json
+    - .gitignore
+    - eslint.config.js
+    - index.html
+    - README.md
+    - vite.config.js
+- .gitattributes
+- .gitignore
+- README.md
+
 ## Configuração do Backend
 
 ### Requisitos
