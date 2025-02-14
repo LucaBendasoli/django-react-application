@@ -1,4 +1,4 @@
-# Django React Application
+# Car Rental
 
 Este é um projeto em desenvolvimento que utiliza Django e React em uma aplicação de locadora de carros.
 
