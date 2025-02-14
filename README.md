@@ -23,6 +23,7 @@ de carros cadastrados, usuários cadastrados, e alugueis.
         - tests.py
         - urls.py
         - validators.py
+        - views.py
     - backend/
         - __init__.py
         - asgi.py
@@ -59,7 +60,7 @@ de carros cadastrados, usuários cadastrados, e alugueis.
         - constants.js
         - main.jsx
     - package.json
-    - package-lock.json
+        - package-lock.json
     - .gitignore
     - eslint.config.js
     - index.html
@@ -74,18 +75,13 @@ de carros cadastrados, usuários cadastrados, e alugueis.
 ### Requisitos
 
 - Python 3.x
-- Django
-- Django REST Framework
-- Django CORS Headers
-- Django REST Framework SimpleJWT
-- Python-dotenv
+- Pip
 
 ### Instalação
 
 1. Clone o repositório:
     ```sh
     git clone https://github.com/LucaBendasoli/car-rental-fullstack.git
-    cd backend
     ```
 
 2. Navegue até o diretório backend:
@@ -100,12 +96,12 @@ de carros cadastrados, usuários cadastrados, e alugueis.
 
 4. Execute as migrações:
     ```sh
-    python manage.py migrate
+    python -m manage migrate
     ```
 
 5. Inicie o servidor de desenvolvimento:
     ```sh
-    python manage.py runserver
+    python -m manage runserver
     ```
 
 ## Configuração do Frontend
